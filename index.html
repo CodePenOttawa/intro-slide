@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>#CodePenOttawa</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/codepenottawa.css">
+		<link rel="icon" sizes="120x120" href="https://twitter.com/codepenottawa/profile_image?size=normal">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+		<!-- Plugins -->
+		<link rel="stylesheet" href="plugin/accessibility/helper.css">
+		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1><img src="https://twitter.com/codepenottawa/profile_image?size=original" width="125" height="125" alt="" class="logo-image"> #CodePenOttawa</h1>
+					<ul>
+						<li id="date">Wednesday, September 27th</li>
+						<li>Twitter: <a href="https://twitter.com/CodePenOttawa">@CodePenOttawa</a></li>
+						<li>Slack: <a href="https://codepen-ott.herokuapp.com/">codepen-ott.herokuapp.com</a></li>
+						<li>💻🍕😄</li>
+					</ul>
+					<h2>WiFi:</h2>
+					<ul>
+						<li>Username: Shopify&nbsp;Guests</li>
+						<li>Password: welcome2shopify</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/accessibility/helper.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+            // Set the date
+            var dateElem = document.querySelector('#date');
+            dateElem.textContent = moment().format('dddd, MMMM Do');
+		</script>
+	</body>
+</html>
